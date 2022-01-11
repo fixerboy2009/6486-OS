@@ -1,0 +1,1 @@
+Welcome traveler!\n Your here because you saw a random github repo, or you hacked my computer and downloaded my files.\n Either way, have fun! Documentation and how to write code is in readme.md\n Goodbye!

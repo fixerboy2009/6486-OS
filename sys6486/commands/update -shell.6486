@@ -1,0 +1,8 @@
+# update -shell, updates the shell from 6486-OS
+
+shellPath = "sys6486/shell.6486"
+latestShellVer = int(network_getrequest("https://pastebin.com/raw/rQSCnCaN").content)
+
+currentVer = 1
+
+print("update -shell is coming soon, thank you for using 6486-OS")

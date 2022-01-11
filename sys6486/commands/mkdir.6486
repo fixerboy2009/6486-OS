@@ -1,0 +1,9 @@
+import os.path
+import os
+
+dirName = input("Input directory name: ")
+
+if os.path.exists(f"home\{dirName}") == False:
+    os.system(f"mkdir home\{dirName}")
+else:
+    print("ERROR: Directory already exists.")

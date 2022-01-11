@@ -1,0 +1,16 @@
+runner = "sys6486/runner.6486"
+globals = programming_getglobalfunctions()
+
+fileToRun = input("Enter file to run (.6486 & in home dir): ")
+
+args = {
+    "FTR": "home/" + fileToRun + ".6486",
+    "FTR_G": globals
+}
+
+with open(runner, 'r') as f:
+    st = ""
+    lines = f.readlines()
+    for line in lines:
+        st = st + line
+    exec(st, args)

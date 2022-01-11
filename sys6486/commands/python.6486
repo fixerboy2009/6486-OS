@@ -1,0 +1,15 @@
+print("PYTHON 6486 shell")
+print("This doesn't include functions used in executing  code in the main shell.")
+print("Type 'exit' to exit.")
+
+import sys
+
+def shell():
+    code = input(">>> ")
+    if code == "exit":
+        sys.exit()
+    else:
+        exec(code)
+    shell()
+
+shell()

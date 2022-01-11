@@ -1,0 +1,39 @@
+# shell thing idk
+shellVer_latest = int(network_getrequest("https://pastebin.com/raw/rQSCnCaN").content)
+shellVer_current = 1
+shellUpdated = False
+
+import os.path
+
+def checkIsUpdated():
+    global shellUpdated
+    if shellVer_latest != shellVer_current:
+        shellUpdated = False
+    else:
+        shellUpdated = True
+
+checkIsUpdated()
+
+if shellUpdated != True:
+    print("WARNING: Shell is outdated, run command 'update -shell' to update the shell.")
+
+def shell():
+    inp = input("SHELL # ")
+    cmdPath = "sys6486/commands/"
+    cmdExistsPath = f"{cmdPath}/{inp}.6486"
+    exists = os.path.exists(cmdExistsPath)
+
+    if exists == True:
+        with open(cmdExistsPath, 'r') as f:
+            st = ""
+            lines = f.readlines()
+            for line in lines:
+                st = st + line
+            loadcode(st)
+
+    if exists == False:
+        print("ERROR: Command not found, check spelling or capitals.")
+
+    shell()
+
+shell()

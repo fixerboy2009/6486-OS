@@ -1,0 +1,13 @@
+import random
+def main():
+    rndNum = random.randint(1, 10)
+    print("DEBUG: Random number is: " + str(rndNum))
+    print("I guess a number between 1 and 10!")
+    print("You only get 1 try!")
+    chosen = int(input(">>> "))
+    if chosen == rndNum:
+        print(":D congrats! You chose the correct number!")
+    else:
+        print("Aww! You lost! I'm sorry!")
+
+main()
